@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="en-US"
+            xmlns="http://www.w3.org/2001/06/grammar"
+            tag-format="semantics/1.0" root="Main">
+    <!--
+    Defines an SRGS grammar for requesting a tool. This grammar includes
+    a object rule that lists the objects that can be requested.
+    -->
+    <rule id="Main">
+      <one-of>
+        <item>
+            Give me a <ruleref uri="#Object"/>
+        </item>
+        <item>
+            Report error
+        </item>
+        <item>
+            Yes you are
+        </item>
+        <item>
+             No you aren't
+        </item>
+      </one-of>
+    </rule>
+
+    <rule id="Object" scope="public">
+        <one-of>
+            <item>green pipe</item>
+            <item>yellow pipe</item>
+        </one-of>
+    </rule>
+</grammar>
